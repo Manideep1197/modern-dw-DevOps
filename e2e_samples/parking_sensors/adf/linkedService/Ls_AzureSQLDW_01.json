@@ -5,14 +5,7 @@
 		"annotations": [],
 		"type": "AzureSqlDW",
 		"typeProperties": {
-			"connectionString": {
-				"type": "AzureKeyVaultSecret",
-				"store": {
-					"referenceName": "Ls_KeyVault_01",
-					"type": "LinkedServiceReference"
-				},
-				"secretName": "sqldwConnectionString"
-			}
+			"connectionString": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=mdwdosqlsrvrdev3la2n.database.windows.net;Initial Catalog=ddo_azuresqldw_dw"
 		}
 	}
 }
