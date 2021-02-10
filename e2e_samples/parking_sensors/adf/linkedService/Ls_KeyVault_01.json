@@ -1,11 +1,11 @@
 {
 	"name": "Ls_KeyVault_01",
-	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "AzureKeyVault",
 		"typeProperties": {
-			"baseUrl": "https://mdwdokvdevkdnam.vault.azure.net/"
+			"baseUrl": "https://mdwdokvdev3la2n.vault.azure.net/"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
 }
