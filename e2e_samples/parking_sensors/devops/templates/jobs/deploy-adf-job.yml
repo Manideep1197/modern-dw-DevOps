@@ -4,14 +4,6 @@ parameters:
 - name: serviceConnection
   type: string
 
-resources: 
-  repositories:
-  - repository: modern_dw_DevOps
-    type: github
-    endpoint: DW_GitHub
-    name: Manideep1197/modern_dw_DevOps
-    ref: adf_publish
-
 jobs:
 - deployment: deploy_adf
   dependsOn: deploy_databricks
@@ -25,7 +17,8 @@ jobs:
     runOnce:
       deploy:
         steps:
-        - checkout: modern_dw_DevOps
+        - checkout: self
+        - ref: adf_publish 
          
 
         # https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/deploy/azure-powershell
