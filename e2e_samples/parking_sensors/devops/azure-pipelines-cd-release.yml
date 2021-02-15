@@ -13,8 +13,8 @@ resources:
   - repository: modern_dw_DevOps
     type: github
     endpoint: DW_GitHub
-    name: self
-    #ref: adf_publish
+    name: Manideep1197/modern_dw_DevOps
+    ref: refs/heads/adf_publish
 
 # The deployment script sets this as a Pipeline Variable, but you may choose to set it here in the definition
 #
