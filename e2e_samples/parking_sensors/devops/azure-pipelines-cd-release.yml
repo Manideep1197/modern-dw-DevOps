@@ -5,14 +5,14 @@ pr: none
 resources:
   pipelines:
   - pipeline: ciartifacts
-    source: mdwdo-park-ci-artifacts
+    source: Manideep1197.modern_dw_DevOps
     trigger: 
       branches:
       - master
   repositories:
-  - repository: mdwdataops_adfpublish
+  - repository: modern_dw_DevOps
     type: github
-    endpoint: mdwdo-park-github
+    endpoint: Manideep1197
     name: devlace/mdw-dataops-clone
     ref: adf_publish
 
