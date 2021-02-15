@@ -1,0 +1,54 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "mdwdoadfdev3la2n"
+		},
+		"Ls_AdlsGen2_01_accountKey": {
+			"value": ""
+		},
+		"Ls_AzureDatabricks_01_accessToken": {
+			"value": ""
+		},
+		"Ls_AzureSQLDW_01_connectionString": {
+			"value": ""
+		},
+		"P_Ingest_MelbParkingData_properties_0_typeProperties_notebookPath": {
+			"value": "/notebooks/02_standardize"
+		},
+		"P_Ingest_MelbParkingData_properties_0_typeProperties_0_egg": {
+			"value": "dbfs:/mnt/datalake/sys/databricks/libs/ddo_transform-localdev-py2.py3-none-any.whl"
+		},
+		"P_Ingest_MelbParkingData_properties_4_typeProperties_notebookPath": {
+			"value": "/notebooks/03_transform"
+		},
+		"P_Ingest_MelbParkingData_properties_4_typeProperties_0_egg": {
+			"value": "dbfs:/mnt/datalake/sys/databricks/libs/ddo_transform-localdev-py2.py3-none-any.whl"
+		},
+		"Ds_AdlsGen2_MelbParkingData_properties_typeProperties_fileName": {
+			"value": "@dataset().infilename"
+		},
+		"Ds_AdlsGen2_MelbParkingData_properties_typeProperties_folderPath": {
+			"value": "@concat(dataset().container, '/', dataset().infilefolder)"
+		},
+		"Ls_AdlsGen2_01_properties_typeProperties_url": {
+			"value": "https://mdwdostordev3la2n.dfs.core.windows.net"
+		},
+		"Ls_AzureDatabricks_01_properties_typeProperties_domain": {
+			"value": "https://adb-7597364399719725.5.azuredatabricks.net"
+		},
+		"Ls_KeyVault_01_properties_typeProperties_baseUrl": {
+			"value": "https://mdwdokvdev3la2n.vault.azure.net/"
+		},
+		"Ls_Rest_MelParkSensors_01_properties_typeProperties_url": {
+			"value": "https://data.melbourne.vic.gov.au/resource/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

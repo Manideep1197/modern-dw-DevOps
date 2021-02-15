@@ -1,0 +1,133 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "mdwdoadfdev3la2n"
+		},
+		"Ls_AdlsGen2_01_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'Ls_AdlsGen2_01'"
+		},
+		"Ls_AzureDatabricks_01_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'Ls_AzureDatabricks_01'"
+		},
+		"Ls_AzureSQLDW_01_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Ls_AzureSQLDW_01'"
+		},
+		"P_Ingest_MelbParkingData_properties_0_typeProperties_notebookPath": {
+			"type": "string",
+			"defaultValue": "/notebooks/02_standardize"
+		},
+		"P_Ingest_MelbParkingData_properties_0_typeProperties_0_egg": {
+			"type": "string",
+			"defaultValue": "dbfs:/mnt/datalake/sys/databricks/libs/ddo_transform-localdev-py2.py3-none-any.whl"
+		},
+		"P_Ingest_MelbParkingData_properties_4_typeProperties_notebookPath": {
+			"type": "string",
+			"defaultValue": "/notebooks/03_transform"
+		},
+		"P_Ingest_MelbParkingData_properties_4_typeProperties_0_egg": {
+			"type": "string",
+			"defaultValue": "dbfs:/mnt/datalake/sys/databricks/libs/ddo_transform-localdev-py2.py3-none-any.whl"
+		},
+		"Ds_AdlsGen2_MelbParkingData_properties_typeProperties_fileName": {
+			"type": "string",
+			"defaultValue": "@dataset().infilename"
+		},
+		"Ds_AdlsGen2_MelbParkingData_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": "@concat(dataset().container, '/', dataset().infilefolder)"
+		},
+		"Ls_AdlsGen2_01_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://mdwdostordev3la2n.dfs.core.windows.net"
+		},
+		"Ls_AzureDatabricks_01_properties_typeProperties_domain": {
+			"type": "string",
+			"defaultValue": "https://adb-7597364399719725.5.azuredatabricks.net"
+		},
+		"Ls_KeyVault_01_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://mdwdokvdev3la2n.vault.azure.net/"
+		},
+		"Ls_Rest_MelParkSensors_01_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://data.melbourne.vic.gov.au/resource/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "mdwdoadfdev3la2n_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"Ls_AdlsGen2_01_accountKey": {
+						"value": "[parameters('Ls_AdlsGen2_01_accountKey')]"
+					},
+					"Ls_AzureDatabricks_01_accessToken": {
+						"value": "[parameters('Ls_AzureDatabricks_01_accessToken')]"
+					},
+					"Ls_AzureSQLDW_01_connectionString": {
+						"value": "[parameters('Ls_AzureSQLDW_01_connectionString')]"
+					},
+					"Ls_AdlsGen2_01_properties_typeProperties_url": {
+						"value": "[parameters('Ls_AdlsGen2_01_properties_typeProperties_url')]"
+					},
+					"Ls_AzureDatabricks_01_properties_typeProperties_domain": {
+						"value": "[parameters('Ls_AzureDatabricks_01_properties_typeProperties_domain')]"
+					},
+					"Ls_KeyVault_01_properties_typeProperties_baseUrl": {
+						"value": "[parameters('Ls_KeyVault_01_properties_typeProperties_baseUrl')]"
+					},
+					"Ls_Rest_MelParkSensors_01_properties_typeProperties_url": {
+						"value": "[parameters('Ls_Rest_MelParkSensors_01_properties_typeProperties_url')]"
+					},
+					"Ds_AdlsGen2_MelbParkingData_properties_typeProperties_fileName": {
+						"value": "[parameters('Ds_AdlsGen2_MelbParkingData_properties_typeProperties_fileName')]"
+					},
+					"Ds_AdlsGen2_MelbParkingData_properties_typeProperties_folderPath": {
+						"value": "[parameters('Ds_AdlsGen2_MelbParkingData_properties_typeProperties_folderPath')]"
+					},
+					"P_Ingest_MelbParkingData_properties_0_typeProperties_notebookPath": {
+						"value": "[parameters('P_Ingest_MelbParkingData_properties_0_typeProperties_notebookPath')]"
+					},
+					"P_Ingest_MelbParkingData_properties_0_typeProperties_0_egg": {
+						"value": "[parameters('P_Ingest_MelbParkingData_properties_0_typeProperties_0_egg')]"
+					},
+					"P_Ingest_MelbParkingData_properties_4_typeProperties_notebookPath": {
+						"value": "[parameters('P_Ingest_MelbParkingData_properties_4_typeProperties_notebookPath')]"
+					},
+					"P_Ingest_MelbParkingData_properties_4_typeProperties_0_egg": {
+						"value": "[parameters('P_Ingest_MelbParkingData_properties_4_typeProperties_0_egg')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
