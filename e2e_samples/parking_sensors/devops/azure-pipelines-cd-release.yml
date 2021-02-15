@@ -34,7 +34,3 @@ stages:
     parameters:
       environmentName: 'DEV'
       serviceConnection: 'mdwdo-park-serviceconnection-dev'
-  - template: templates/jobs/deploy-adf-job.yml
-    parameters:
-      environmentName: 'DEV '
-      serviceConnection: 'mdwdo-park-serviceconnection-dev'
