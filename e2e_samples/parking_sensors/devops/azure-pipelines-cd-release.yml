@@ -13,7 +13,7 @@ resources:
   - repository: modern_dw_DevOps
     type: github
     endpoint: Manideep1197
-    name: devlace/mdw-dataops-clone
+    name: Manideep1197/modern_dw_DevOps
     ref: adf_publish
 
 # The deployment script sets this as a Pipeline Variable, but you may choose to set it here in the definition
