@@ -10,7 +10,7 @@ resources:
       branches:
       - master
   repositories:
-  - repository: modern_dw_DevOps
+  - repository: self
     type: github
     endpoint: Manideep1197
     name: Manideep1197/modern_dw_DevOps
