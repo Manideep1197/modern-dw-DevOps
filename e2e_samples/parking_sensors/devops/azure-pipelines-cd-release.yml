@@ -12,7 +12,7 @@ resources:
   repositories:
   - repository: self
     type: github
-    endpoint: Manideep1197
+    endpoint: DW_GitHub
     name: Manideep1197/modern_dw_DevOps
     #ref: adf_publish
 
