@@ -49,7 +49,7 @@
 		},
 		"Ls_AzureDatabricks_01_properties_typeProperties_domain": {
 			"type": "string",
-			"defaultValue": "https://adb-7597364399719725.5.azuredatabricks.net"
+			"defaultValue": "https://adb-38979198286232.12.azuredatabricks.net"
 		},
 		"Ls_KeyVault_01_properties_typeProperties_baseUrl": {
 			"type": "string",

@@ -36,7 +36,7 @@
 			"value": "https://mdwdostordev3la2n.dfs.core.windows.net"
 		},
 		"Ls_AzureDatabricks_01_properties_typeProperties_domain": {
-			"value": "https://adb-7597364399719725.5.azuredatabricks.net"
+			"value": "https://adb-38979198286232.12.azuredatabricks.net"
 		},
 		"Ls_KeyVault_01_properties_typeProperties_baseUrl": {
 			"value": "https://mdwdokvdev3la2n.vault.azure.net/"
