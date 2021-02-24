@@ -103,12 +103,12 @@
     <SqlCmdVariable Include="ADLSCredentialKey">
       <DefaultValue>
       </DefaultValue>
-      <Value>2m8s1W4bJfrkW6RMVDJI0nmMb+LL8sxGKPQkrelzCOisckWpDJTjD/lbzH8emfkem2LzAq7Q/kuGWsvI7JMAvg==</Value>
+      <Value>$(SqlCmdVar__2)</Value>
     </SqlCmdVariable>
     <SqlCmdVariable Include="ADLSLocation">
       <DefaultValue>
       </DefaultValue>
-      <Value>Central India</Value>
+      <Value>$(SqlCmdVar__1)</Value>
     </SqlCmdVariable>
   </ItemGroup>
   <ItemGroup>
