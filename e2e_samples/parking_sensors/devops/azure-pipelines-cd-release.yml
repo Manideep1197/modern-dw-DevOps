@@ -10,10 +10,10 @@ resources:
       branches:
       - master
   repositories:
-  - repository: mdwdataops_adfpublish
+  - repository: modern_dw_DevOps
     type: github
-    endpoint: mdwdo-park-github
-    name: devlace/mdw-dataops-clone
+    endpoint: DW_GitHub
+    name: Manideep1197/modern_dw_DevOps
     ref: adf_publish
 
 # The deployment script sets this as a Pipeline Variable, but you may choose to set it here in the definition
