@@ -31,7 +31,7 @@ stages:
   - template: templates/jobs/deploy-databricks-job.yml
     parameters:
       environmentName: 'DEV'
-  - template: templates/jobs/deploy-azuresqldb-job.yml
-    parameters:
-      environmentName: 'DEV'
-      serviceConnection: 'mdwdo-park-serviceconnection-dev'
+  #- template: templates/jobs/deploy-azuresqldb-job.yml
+  #  parameters:
+   #   environmentName: 'DEV'
+    #  serviceConnection: 'mdwdo-park-serviceconnection-dev'
