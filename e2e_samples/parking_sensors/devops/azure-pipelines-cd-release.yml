@@ -5,7 +5,7 @@ pr: none
 resources:
   pipelines:
   - pipeline: ciartifacts
-    source: mdwdo-park-ci-artifacts
+    source: Manideep1197.modern_dw_DevOps
     trigger: 
       branches:
       - master
