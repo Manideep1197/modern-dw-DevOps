@@ -1,11 +1,4 @@
-trigger:
-  branches:
-    include:
-    - master
-    - release/*
-  paths:
-    include:
-    - e2e_samples/parking_sensors/*
+trigger: none
 
 pr: none
 
